@@ -1,0 +1,37 @@
+buổi 2:
+git add . // quản lý github
+
+git commit -m 
+
+khóa chính là biginteger
+
+migration quản lý phiên bản của db
+
+git checkout -b lesson2_migration chạy ở một cái mới
+
+git status // kiểm tra xem có chạy ở cái mới ko
+
+php artisan  make:migration create_categories_table // tạo bảng
+
+php artisan  make:migration update_products_table_add_fk --table=products // update
+
+ php artisan migrate // sửa xong cập nhập lên bảng mới
+
+php artisan migrate:rollback // đưa lại lần bat gần nhất ( xóa gần nhất)
+
+php artisan migrate:refresh // đưa db về từ đầu, rồi dựa vào dow để tạo lại db ( xóa gần nhất)
+
+php artisan migrate:fresh // đưa db về từ đầu ( xóa gần nhất)
+
+php artisan migrate // đưa lên db
+
+buổi 3:
+
+khai báo ở đâu thì phải thêm use Illuminate\Support\Facades\DB; lên đầu
+
+1: php artisan make:seeder UserSeeder
+2: DB::table('users')->insert($data);
+3: php artisan db:seed
+
+adminLTE
+
